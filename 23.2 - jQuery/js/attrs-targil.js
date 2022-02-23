@@ -30,6 +30,5 @@ $(document).ready(() => {
   });
 });
 chage_Image = () => {
-  let img_Element = $("#img");
-  img_Element.attr("src", img_Arr[img_Index]);
+  $("#img").attr("src", img_Arr[img_Index]);
 };

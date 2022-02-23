@@ -25,6 +25,7 @@ $(document).ready(() => {
   $("#txt").focus(() => {
     console.log("this event will happen when the textbox is focused");
   });
+
   $("#txt").blur(() => {
     console.log("this event will happen when you leave the textbox");
   });
