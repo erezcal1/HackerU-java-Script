@@ -2,6 +2,10 @@
   height: 100vh;
   width: 100vw;
   background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .green-screen {
   background-color: green;
