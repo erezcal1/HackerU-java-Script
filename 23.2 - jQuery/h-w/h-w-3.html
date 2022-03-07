@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="./css/h-w-3.css" />
   </head>
   <body>
-    <form>
+    <form id="my_Form">
       <input type="text" name="animal" placeholder="animal" id="animal" />
       <input type="button" value="add me to list" id="btn" />
+      <ol id="animalList"></ol>
+      <div class="container">
+        <div class="close">x</div>
+        <input type="text" placeholder="change name" id="text" />
+        <input type="button" value="remove" id="remove" />
+      </div>
     </form>
-
-    <ol id="animalList"></ol>
-    <button id="btn2">Click Me</button>
   </body>
 </html>
