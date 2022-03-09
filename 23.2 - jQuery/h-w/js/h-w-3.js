@@ -4,6 +4,7 @@ $(document).ready(() => {
   for (; i < arr.length; i++) {
     $("#animalList").append(
       `<li class="li"><button id="${i}">${arr[i]}</button></li>`
+      // `<li id="${i}"><button>${arr[i]}</button></li>`
     );
   }
 
@@ -18,7 +19,9 @@ $(document).ready(() => {
   });
 
   $("#my_Form").on("click", "button", function (e) {
-    let index = $(this).attr("id");
+    // let index = $(this).attr("id");
+    let index = $("button").index(this);
+    console.log(index);
 
     $(".container").css("display", "block");
 
@@ -27,16 +30,20 @@ $(document).ready(() => {
     });
 
     $("#text").blur(() => {
-      $("#animalList")
-        .children()
-        .eq(index)
-        .html(`<button id="${index}">` + $("#text").val() + `</button>`);
-      console.log(index);
+      if ($("#text").val() != "") {
+        $("#animalList")
+          .children()
+          .eq(index)
+          .html(`<button id="${index}">` + $("#text").val() + `</button>`);
+        console.log(index);
+      }
     });
 
     $("#remove").click(() => {
       console.log(index);
-      $("#animalList").children().eq(index).remove();
+      // $("li").not($("#index")).remove();
+      $("ul #index").remove();
+      // $("#animalList").children().eq(index).remove();
       // $(this).closest(".li").remove();
     });
 
