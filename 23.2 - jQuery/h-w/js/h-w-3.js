@@ -19,9 +19,10 @@ $(document).ready(() => {
   });
 
   $("#my_Form").on("click", "button", function (e) {
-    // let index = $(this).attr("id");
-    let index = $("button").index(this);
-    console.log(index);
+    let index = $(this).attr("id");
+    // let index = $("button").index(this);
+    // console.log(index);
+    // console.log(this);
 
     $(".container").css("display", "block");
 
@@ -42,8 +43,8 @@ $(document).ready(() => {
     $("#remove").click(() => {
       console.log(index);
       // $("li").not($("#index")).remove();
-      $("ul #index").remove();
-      // $("#animalList").children().eq(index).remove();
+      // $("ul #index").remove();
+      $("#animalList").children().eq(index).remove();
       // $(this).closest(".li").remove();
     });
 
